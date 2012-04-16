@@ -1,0 +1,23 @@
+SELECT a.user_id, b.class, a.content,  a.date FROM `twitts` as a right join (opinions as b) ON (a.id = b.twitt_id) where a.date >= '2010'
+
+SELECT b.user_id, b.class FROM `twitts` as a LEFT JOIN (opinions as b) ON (a.id = b.twitt_id) WHERE a.date BETWEEN '2010-01-11' AND '2010-01-12'
+
+SELECT * FROM (SELECT b.user_id, b.class FROM `twitts` as a LEFT JOIN (opinions as b) ON (a.id = b.twitt_id) WHERE a.date BETWEEN '2009-11-16' AND '2009-11-17') AS t1,
+(SELECT b.user_id, b.class FROM `twitts` as a LEFT JOIN (opinions as b) ON (a.id = b.twitt_id) WHERE a.date BETWEEN '2010-01-11' AND '2010-01-12') AS t2
+
+
+
+
+SELECT a.user_id, a.class FROM `opinions` as a LEFT JOIN (twitts as b) ON (a.twitt_id = b.id) WHERE a.date BETWEEN '2010-01-11' AND '2010-01-12'
+
+
+
+
+
+
+
+
+SELECT a.user_id, a.class, content FROM `opinions` as a LEFT JOIN (twitts as b) ON (a.twitt_id = b.id) WHERE a.class != 'not' AND MATCH (b.content) AGAINST('frei @noticiasfrei #frei') AND a.date BETWEEN '2010-01-11' AND '2010-01-12';
+
+SELECT a.user_id, a.class, content FROM `opinions` as a LEFT JOIN (twitts as b) ON (a.twitt_id = b.id) WHERE a.class != 'not' AND MATCH (b.content) AGAINST('piñera @sebastianpinera #piñera') AND a.date BETWEEN '2010-01-11' AND '2010-01-12';
+

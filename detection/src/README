@@ -1,0 +1,2 @@
+Please, run this command before load opinionapp.py.
+   analyze _freeling -f /usr/share/FreeLing/config/es.cfg
