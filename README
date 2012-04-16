@@ -1,0 +1,13 @@
+Instrucciones:
+
+Frontend:
+1. Configurar apropiadamente apache para cargar el proyecto php :) (googlear aha)
+2. Ir al backend.
+
+Backend:
+ - Para ejecutar Backendo: ./run_backend.sh 
+ - Si se desea detener el backend ejecutar ./run_backend -s
+
+Notas:
+ - Si se desea agregar palabras claves para descargar Tweets, modificar el archivo ./search/keywords , y luego reiniciar el backend.
+
